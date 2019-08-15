@@ -1,0 +1,95 @@
+.home-product
+.tab-navigation-wrapper
+.tab-wrapper
+	.tab-content
+		display: none
+		&.active
+			display: block
+		.banner
+			position: relative
+			.wrapper
+				a
+					height: 200px
+					width: auto
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+			.caption
+				position: absolute
+				left: 50px
+				bottom: 30%
+			.banner-button
+				border: 1px solid #ffffff
+				border-radius: 15px
+		
+				a
+					display: block
+					padding: 4px 16px
+					font-size: 14px
+					font-weight: 600
+					color: #ffffff
+					text-transform: uppercase
+		figure
+			margin-bottom: 20px
+			padding: 20px
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1)
+			transition: .3s all ease-in-out
+			&:hover
+				box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1) , 0px 0px 0px 1px #b72600
+
+
+			.figure-image
+				a
+					height: 220px
+					width: auto
+					padding: 20px 0
+					img
+						width: 100%
+						height: 100%
+						object-fit: contain
+			figcaption
+				.top-caption
+					h2
+						cursor: pointer
+						line-height: 22px
+						&:hover
+							*
+								text-decoration: underline
+						*
+							font-size: 18px
+							font-weight: 700
+							color: #333333
+							text-transform: uppercase
+					h3
+						cursor: pointer
+						&:hover
+							*
+								text-decoration: underline
+						*
+							font-size: 14px
+							font-weight: 400
+							color: #333333
+				.bottom-caption
+					display: flex
+					justify-content: space-between
+					align-items: center
+					.price
+						h4
+							font-size: 18px
+							font-weight: 700
+							color: #b72600
+						h5
+							*
+								font-size: 14px
+								font-weight: 400
+								color: #999999
+					.cart
+						a
+							cursor: pointer
+							margin-left: 10px
+							em
+								font-size: 20px
+								color: #999999
+							img
+								margin-bottom: 8px

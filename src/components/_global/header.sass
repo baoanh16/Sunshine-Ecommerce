@@ -1,0 +1,486 @@
+header
+	height: 100px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	z-index: 121
+	background: rgba(#000000,.6)
+	.header-sunshine
+		height: 100%
+		.container
+			display: flex
+			justify-content: space-between
+			align-items: center
+			position: relative
+			height: 100%
+	.header-wrapper-left
+		padding-top: 13px
+		.navbrand
+			a
+				img
+					max-width: 100%
+					height: auto
+		@media screen and(max-width:1025px)
+			padding-top: 0
+			.navbrand
+				a
+					img
+						width: 60%
+		
+
+	.header-wrapper-right
+		paddind: 0
+		.header-wrapper-top
+			margin-bottom: 5px
+			display: flex
+			justify-content: flex-end
+			align-items: center
+		.header-wrapper-bottom
+			display: flex
+			justify-content: space-between
+			align-items: center
+		@media screen and(max-width:1025px)
+			margin-left: auto
+			padding: 0
+			.header-wrapper-top
+				margin: 0
+	.search-wrapper
+		padding: 0 20px
+		border-right: 1px solid #545454
+		.searchbox
+			border-bottom: 1px solid #545454
+			input
+				background: none
+				border: none
+				color: #9b9b9b
+				&:focus
+					outline: none
+				&::placeholder
+					font-size: 14px
+					font-style: italic
+					color: #9b9b9b
+			button
+				border: none
+				background: none
+				em
+					font-size: 22px
+					color: $main
+					line-height: 12px
+				&:focus
+					outline: none
+	.contact-wrapper
+		padding: 0 20px
+		border-right: 1px solid #545454
+		a
+			color: $main
+			font-weight: 700
+			font-size: 16px
+			em
+				font-size: 20px
+				margin-right: 5px
+				color: $main
+				font-weight: 400
+			*
+				color: $main
+				font-weight: 700
+	.account-wrapper
+		padding: 0 20px
+		border-right: 1px solid #545454
+		display: flex
+		justify-content: center
+		align-items: center
+		em
+			margin-right: 5px
+			font-size: 20px
+			color: $main
+		.account-wrapper-toggle
+			li
+				list-style-type: none
+				font-size: 14px
+				color: $main
+				font-weight: 400
+				&.firstnav
+	.wish-list-wrapper
+		padding: 0 20px
+		border-right: 1px solid #545454
+		.wish-list-item
+			em
+				font-size: 20px
+				color: $main
+	.cart-wrapper
+		padding: 0 20px
+		border-right: 1px solid #545454
+		margin-bottom: 5px
+	.language-wrapper
+		margin: 0 0
+		padding: 0 20px
+		border-left: 1px solid #545454
+		@media screen and(max-width:1025px)
+			margin-right: 20px
+		.language-list
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				text-transform: uppercase
+				display: inline-block
+				transition: .3s all ease-in-out
+				&.active
+					span,a
+						color: #ff0000
+				&:hover
+					a
+						color: $main
+				a
+					transition: .3s all ease-in-out
+					text-decoration: none
+					color: $main
+					font-weight: 400
+				span
+					position: relative
+					z-index: 10
+					padding: 0 
+					line-height: 22px
+					font-weight: 400
+					color: $main
+			.has-sub
+				position: relative
+				&:hover
+					span,a
+						color: #ffffff
+						z-index: 119
+					.nav-sub
+						left: -16px
+						top: -10px
+						padding: 40px 30px 0 30px 
+						opacity: 1
+						filter: none
+						transition: opacity .3s ease, z-index .3s ease .1s
+						li
+							display: flex
+							justify-content: center
+							align-items: center
+							line-height: 40px
+							height: 40px
+							width: 100%
+							display: block
+							a
+								line-height: 30px
+								height: 30px
+								width: 100%
+								display: flex
+								justify-content: center
+								align-items: center
+								color: #ffffff
+							&:hover
+								a
+									color: #333333
+				span,a
+					position: relative
+				span
+					&:after
+						bottom: 0
+				ul
+					max-height: 500px
+					position: absolute
+					left: 0
+					top: 0
+					width: 120%
+					margin-left: -10%
+					z-index: 118
+					overflow: hidden
+					background: $main
+					opacity: 0
+					transition: opacity .3s ease,max-height .3s ease .3s
+					li
+						display: none
+						text-align: center
+						padding: 0
+						line-height: 50px
+						margin: 0
+						a
+							color: #ffffff
+							transition: all .3s ease 0s
+	.navigation-wrapper
+		> ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			> li
+				text-transform: uppercase
+				display: inline-block
+				&.active
+					span,a
+						color: #ffffff
+				&:hover
+					a
+						color: #ffffff
+				> a
+					transition: .3s all ease-in-out
+					text-decoration: none
+					color: $main
+					font-weight: 400
+					padding: 4px 20px 23px
+				span
+					position: relative
+					z-index: 10
+					padding: 0 
+					line-height: 22px
+					font-weight: 400
+					color: $main
+			.has-mega
+				@media screen and(max-width:1024.2px)
+					&.active
+						.mega-wrapper
+							top: 0
+							height: auto
+							pointer-events: auto
+							opacity: 1
+				@media screen and(max-width:576px)
+					&.active
+						.mega-wrapper
+							padding: 30px 30px 60px
+							overflow: scroll
+							height: 100%
+				em
+					display: none
+
+				@media screen and(min-width:1025px)
+					&:hover
+						.mega-wrapper
+							opacity: 1
+							height: auto
+							pointer-events: auto
+						span,a
+							color: #ffffff
+							z-index: 14
+							&:after
+								z-index: 11
+								transform: rotate(-180deg)
+								color: #ffffff
+				
+				span,a
+					position: relative
+					&:after
+						position: absolute
+						font-family: 'Linearicons-Free'
+						content: '\e874'
+						font-size: 10px
+						right: 5px
+						color: $main
+						top: 6px
+						transition: transform .3s ease
+					@media screen and(max-width:1200px)
+						&:after
+							right: 0
+					@media screen and(max-width:1025px)
+						&:after
+							display: none
+							color: #ffffff
+							right: -5px
+				.mega-wrapper
+					padding: 30px 
+					pointer-events: none
+					position: absolute
+					left: 0
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					top: 100%
+					width: 100%
+					margin-left: 0
+					z-index: 9
+					overflow: visible
+					background: rgba(#000000,.7)
+					opacity: 1
+					height: 0
+					opacity: 0
+					pointer-events: none
+					transition: opacity .3s ease,max-height .3s ease .3s
+					em
+						display: none
+						font-size: 30px
+					.mega-item
+						display: block
+						padding: 0
+						margin: 0 0 30px 0
+						.mega-list 
+							list-style-type: none
+							padding: 0
+							display: flex
+							flex-direction: column
+							justify-content: center
+							align-items: flex-start
+							li
+								a
+									display: block
+									padding: 4px 0
+									color: $main
+						h2
+							font-size: 14px
+							color: $main
+							font-weight: 700
+							text-transform: uppercase
+							position: relative
+							margin-bottom: 20px
+							&:after
+								content: ''
+								display: block
+								position: absolute
+								left: 0
+								bottom: -6px
+								width: 50px
+								height: 2px
+								background: $main 
+						a
+							color: #ffffff
+							transition: all .3s ease 0s
+							&:after
+								display: none
+					@media screen and(max-width:1025px)
+						.mega-wrapper
+							padding: 30px
+						em
+							display: block
+							position: absolute
+							right: 16px
+							top: 16px
+						.mega-item
+							h2
+								text-align: left
+							.mega-list
+								li
+									margin: 2px 0 !important
+									a
+										margin: 0 !important
+					@media screen and(max-width:576px)
+						.mega-item
+							margin: 0 0 16px
+
+	.group-link-wrapper
+		margin-left: 10px
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			padding: 10px 15px
+			font-size: 14px
+			color: #ffffff
+			font-weight: 400
+			border: 1px solid #ffffff
+	.mobile-toggle
+		display: none
+		em
+			font-size: 30px
+			color: #ffffff
+		@media screen and(max-width:1025px)
+			display: block
+	.mobile-wrapper
+		opacity: 1
+		display: none
+		@media screen and(max-width:1025px)
+			background: rgba(#000000,.9)
+			top: 50px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-flow: column
+			height: 100vh
+			z-index: 116
+			pointer-events: none
+			position: fixed
+			right: 0
+			opacity: 0
+			width: 0
+			transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+			&.active
+				pointer-events: auto
+				opacity: 1
+				width: 100%
+				.navigation-wrapper
+					ul
+						display: block
+						overflow: visible
+						z-index: 12
+						pointer-events: auto
+						opacity: 1
+		
+	@media screen and(max-width:1200px)
+		.navigation-wrapper
+			ul
+				li
+					a
+						font-size: 14px
+						padding: 4px 14px 24px 
+		.contact-wrapper
+			a
+				font-size: 15px
+				em
+					font-size: 16px
+	@media screen and(max-width:1025px)
+		height: 50px
+		.search-wrapper
+			border: none
+			margin-bottom: 20px
+			.searchbox
+				button
+					em
+						color: #ffffff
+		.contact-wrapper
+			border: none
+			margin-bottom: 20px
+		.account-wrapper
+			border: none
+		.wish-list-wrapper
+			border: none
+		.cart-wrapper
+			border: none
+		.language-wrapper
+			margin: 0
+			border: none
+		.navbrand
+			a
+				img
+					width: 50%
+		.navigation-wrapper
+			padding: 20px 0
+			width: 100%
+			ul
+				text-align: center
+				li
+					display: flex
+					margin: 10px 0
+					align-items: center
+					justify-content: center
+					&.has-mega
+						a
+							padding: 0 0
+							margin-left: 40px
+						em
+							display: inline-block
+							color: #ffffff
+							font-size: 16px
+							width: 60px
+							height: 20px
+					a
+						color: #ffffff
+						padding: 0 0 
+	
+	@media screen and(max-width:768px)
+		.account-wrapper
+			.account-wrapper-toggle
+				li
+					display: none
+	@media screen and(max-width:576px)
+		.search-wrapper
+			padding: 0 16px
+		.contact-wrapper
+			padding: 0 16px
+		.account-wrapper
+			padding: 0 16px
+		.wish-list-wrapper
+			padding: 0 16px
+		.cart-wrapper
+			padding: 0 16px
