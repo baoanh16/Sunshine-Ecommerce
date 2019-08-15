@@ -1,7 +1,51 @@
 .home-product
+	padding: 50px 0
+	@media screen and(max-width:1441px)
+		padding: 40px 0
+
 .tab-navigation-wrapper
+	margin-bottom: 16px
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			display: inline-block
+			&:hover
+				a
+					text-decoration: underline
+			&:not(:last-child)
+				margin-right: 15px
+				position: relative
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					right: -10px
+					bottom: 6px
+					width: 1px
+					height:  16px
+					background: #bbbbbb
+			&.active
+				a
+					color: #a12505
+			a
+				transition: .3s all ease-in-out
+				text-decoration: none
+				text-transform: uppercase
+				font-size: 18px
+				font-weight: 600
+				color: #333333
+	@media screen and(max-width:576px)
+		white-space: nowrap
+		overflow: auto
+		ul
+			li
+				a
+					font-size: 16px
+
 .tab-wrapper
-	.tab-content
+	.tab-item
 		display: none
 		&.active
 			display: block
@@ -31,6 +75,8 @@
 					color: #ffffff
 					text-transform: uppercase
 		figure
+			min-height: 350px
+			max-height: 350px
 			margin-bottom: 20px
 			padding: 20px
 			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1)
@@ -41,15 +87,17 @@
 
 			.figure-image
 				a
-					height: 220px
+					display: block
+					height: 200px
 					width: auto
-					padding: 20px 0
+					padding:  20px
 					img
 						width: 100%
 						height: 100%
 						object-fit: contain
 			figcaption
 				.top-caption
+					padding-bottom: 12px
 					h2
 						cursor: pointer
 						line-height: 22px
@@ -57,6 +105,8 @@
 							*
 								text-decoration: underline
 						*
+							margin-bottom: 0
+							display: block
 							font-size: 18px
 							font-weight: 700
 							color: #333333
@@ -67,6 +117,11 @@
 							*
 								text-decoration: underline
 						*
+							display: -webkit-box
+							-webkit-line-clamp: 2
+							-webkit-box-orient: vertical
+							overflow: hidden
+							line-height: 20px
 							font-size: 14px
 							font-weight: 400
 							color: #333333
@@ -88,8 +143,54 @@
 						a
 							cursor: pointer
 							margin-left: 10px
+							&:first-child
+								&:hover
+									em
+										&:before
+											content: '\F2D1'
+											color: #b72600
 							em
+								transition: .3s all ease-in-out
 								font-size: 20px
 								color: #999999
 							img
 								margin-bottom: 8px
+	@media screen and(max-width:1350px)
+		.tab-item
+			figure
+				padding: 0 20px
+				min-height: 315px
+				max-height: 315px
+				.figure-image
+					a
+						height: 180px
+				figcaption
+					.top-caption
+						padding-bottom: 5px
+	@media screen and(max-width:1200px)
+		.tab-item
+			figure
+				padding: 0 20px
+				min-height: 272px
+				max-height: 272px
+				.figure-image
+					a
+						height: 150px
+				figcaption
+					.top-caption
+						padding-bottom: 5px
+	@media screen and(max-width:1025px)
+		.tab-item
+			.banner
+				margin-bottom: 20px
+			figure
+				padding: 20px
+				min-height: 350px
+				max-height: 350px
+				.figure-image
+					a
+						height: 200px
+				figcaption
+					.top-caption
+						padding-bottom: 5px
+

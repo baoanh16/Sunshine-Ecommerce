@@ -2,12 +2,12 @@ section.home-product
 	.container
 		.tab-navigation-wrapper
 			ul
+				li.active
+					a(href="javascript:void(0)" data-type='tab-1') New Products
 				li
-					a(href="#") New Products
-				li
-					a(href="#") Promotion Products
+					a(href="javascript:void(0)" data-type='tab-2') Promotion Products
 		.tab-wrapper
-			.tab-content.active
+			.tab-item.active#tab-1
 				.row
 					.col-lg-6
 						.banner
@@ -17,10 +17,9 @@ section.home-product
 							.caption
 								.banner-button
 									a(href="") Xem thêm
-
 					.col-lg-6
 						.row
-							.col-6
+							.col-sm-6
 								figure
 									.figure-image
 										.figure-image
@@ -31,7 +30,7 @@ section.home-product
 											h2 
 												a Sef 8000
 											h3 
-												a Electric Salamander -Fixed Top
+												a Electric Salamander -Fixed TopElectric Salamander -Fixed Top
 										.bottom-caption
 											.price
 												h4 5.500.000 đ
@@ -42,12 +41,12 @@ section.home-product
 													em.mdi.mdi-heart-outline
 												a
 													img(src="./img/cart-grey.png", alt="")
-							.col-6
+							.col-sm-6
 								figure
 									.figure-image
 										.figure-image
 											a(href="#")
-												img(src="./img/product/1.png", alt="")
+												img(src="./img/product/2.png", alt="")
 									figcaption
 										.top-caption
 											h2 
@@ -66,12 +65,12 @@ section.home-product
 													img(src="./img/cart-grey.png", alt="")
 
 
-					.col-lg-3
+					.col-sm-6.col-lg-3
 						figure
 							.figure-image
 								.figure-image
 									a(href="#")
-										img(src="./img/product/1.png", alt="")
+										img(src="./img/product/3.png", alt="")
 							figcaption
 								.top-caption
 									h2 
@@ -88,12 +87,12 @@ section.home-product
 											em.mdi.mdi-heart-outline
 										a
 											img(src="./img/cart-grey.png", alt="")
-					.col-lg-3
+					.col-sm-6.col-lg-3
 						figure
 							.figure-image
 								.figure-image
 									a(href="#")
-										img(src="./img/product/1.png", alt="")
+										img(src="./img/product/4.png", alt="")
 							figcaption
 								.top-caption
 									h2 
@@ -110,12 +109,12 @@ section.home-product
 											em.mdi.mdi-heart-outline
 										a
 											img(src="./img/cart-grey.png", alt="")
-					.col-lg-3
+					.col-sm-6.col-lg-3
 						figure
 							.figure-image
 								.figure-image
 									a(href="#")
-										img(src="./img/product/1.png", alt="")
+										img(src="./img/product/5.png", alt="")
 							figcaption
 								.top-caption
 									h2 
@@ -132,12 +131,12 @@ section.home-product
 											em.mdi.mdi-heart-outline
 										a
 											img(src="./img/cart-grey.png", alt="")
-					.col-lg-3
+					.col-sm-6.col-lg-3
 						figure
 							.figure-image
 								.figure-image
 									a(href="#")
-										img(src="./img/product/1.png", alt="")
+										img(src="./img/product/6.png", alt="")
 							figcaption
 								.top-caption
 									h2 
@@ -155,3 +154,151 @@ section.home-product
 										a
 											img(src="./img/cart-grey.png", alt="")
 				
+			.tab-item#tab-2
+				.row
+					.col-lg-6
+						.banner
+							.wrapper
+								a(href="")
+									img(src="./img/banner/2.jpg", alt="")
+							.caption
+								.banner-button
+									a(href="") Xem thêm 2
+					.col-lg-6
+						.row
+							.col-6
+								figure
+									.figure-image
+										.figure-image
+											a(href="#")
+												img(src="./img/product/1.png", alt="")
+									figcaption
+										.top-caption
+											h2 
+												a Sef 8000
+											h3 
+												a Electric Salamander -Fixed TopElectric Salamander -Fixed Top
+										.bottom-caption
+											.price
+												h4 5.500.000 đ
+												h5
+													s 6.500.000 đ
+											.cart
+												a
+													em.mdi.mdi-heart-outline
+												a
+													img(src="./img/cart-grey.png", alt="")
+							.col-6
+								figure
+									.figure-image
+										.figure-image
+											a(href="#")
+												img(src="./img/product/2.png", alt="")
+									figcaption
+										.top-caption
+											h2 
+												a Sef 8000
+											h3 
+												a Electric Salamander -Fixed Top
+										.bottom-caption
+											.price
+												h4 5.500.000 đ
+												h5
+													s 6.500.000 đ
+											.cart
+												a
+													em.mdi.mdi-heart-outline
+												a
+													img(src="./img/cart-grey.png", alt="")
+
+
+					.col-lg-3
+						figure
+							.figure-image
+								.figure-image
+									a(href="#")
+										img(src="./img/product/3.png", alt="")
+							figcaption
+								.top-caption
+									h2 
+										a Sef 8000
+									h3 
+										a Electric Salamander -Fixed Top
+								.bottom-caption
+									.price
+										h4 5.500.000 đ
+										h5
+											s 6.500.000 đ
+									.cart
+										a
+											em.mdi.mdi-heart-outline
+										a
+											img(src="./img/cart-grey.png", alt="")
+					.col-lg-3
+						figure
+							.figure-image
+								.figure-image
+									a(href="#")
+										img(src="./img/product/4.png", alt="")
+							figcaption
+								.top-caption
+									h2 
+										a Sef 8000
+									h3 
+										a Electric Salamander -Fixed Top
+								.bottom-caption
+									.price
+										h4 5.500.000 đ
+										h5
+											s 6.500.000 đ
+									.cart
+										a
+											em.mdi.mdi-heart-outline
+										a
+											img(src="./img/cart-grey.png", alt="")
+					.col-lg-3
+						figure
+							.figure-image
+								.figure-image
+									a(href="#")
+										img(src="./img/product/5.png", alt="")
+							figcaption
+								.top-caption
+									h2 
+										a Sef 8000
+									h3 
+										a Electric Salamander -Fixed Top
+								.bottom-caption
+									.price
+										h4 5.500.000 đ
+										h5
+											s 6.500.000 đ
+									.cart
+										a
+											em.mdi.mdi-heart-outline
+										a
+											img(src="./img/cart-grey.png", alt="")
+					.col-lg-3
+						figure
+							.figure-image
+								.figure-image
+									a(href="#")
+										img(src="./img/product/5.png", alt="")
+							figcaption
+								.top-caption
+									h2 
+										a Sef 8000
+									h3 
+										a Electric Salamander -Fixed Top
+								.bottom-caption
+									.price
+										h4 5.500.000 đ
+										h5
+											s 6.500.000 đ
+									.cart
+										a
+											em.mdi.mdi-heart-outline
+										a
+											img(src="./img/cart-grey.png", alt="")
+				
+			

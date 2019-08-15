@@ -12,6 +12,7 @@ $(document).ready(function() {
 	//Library init
 	$(".lightgallery").lightGallery();
 	//Declare function Javascript
+	productCategoryDashboard();
 	tabActive();
 	mobileToggle();
 	mappingNavigation();
@@ -41,10 +42,49 @@ if ($(window).width() > 1024) {
 }
 // Remove when click outside the circle
 
+function productCategoryDashboard() {
+	let li = $(".product-by-category-wrapper ul  li");
+	let title = $(".product-by-category-wrapper ul  li .title-caption");
+	let content = $(".product-by-category-wrapper ul li .product-wrapper");
+	var body = $("html, body");
+	title.click(function() {
+		// content.slideToggle("slow", function() {
+		// 	if (content.is(":visible")) {
+		// 		$("html, body").animate({ scrollTop: content.offset().top });
+		// 	}
+		// });
+
+		if (
+			!$(this)
+				.parent()
+				.hasClass("active")
+		) {
+			$(".product-by-category-wrapper ul li .product-wrapper").slideUp();
+			$(this)
+				.next()
+				.slideDown("slow", function() {
+					$("html, body").animate({
+						scrollTop: $(this).offset().top - 100
+					});
+				});
+
+			li.removeClass("active");
+			$(this)
+				.parent()
+				.addClass("active");
+		} else {
+			$(this)
+				.next()
+				.slideToggle();
+			li.removeClass("active");
+		}
+	});
+}
+
 function tabActive() {
-	$(".tab-list-navigation li a").on("click", function() {
+	$(".tab-navigation-wrapper li a").on("click", function() {
 		$(this)
-			.parents(".tab-list-navigation")
+			.parents(".tab-navigation-wrapper")
 			.find("li")
 			.removeClass("active");
 		$(this)
@@ -80,7 +120,6 @@ function toggleMegaMenuMobile() {
 			.removeClass("active");
 	});
 }
-fucntio;
 //Swiper init
 
 function swiperInit() {
@@ -100,6 +139,46 @@ function swiperInit() {
 			prevEl: ".navigation-banner-prev"
 		}
 	});
+	var partnerSwiper = new Swiper(
+		".partnet-swiper-wrapper .swiper-container",
+		{
+			// Optional parameters
+			loop: true,
+			autoplay: {
+				delay: 2500
+			},
+			breakpointsInverse: true,
+			breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				576: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				},
+				768: {
+					slidesPerView: 4,
+					spaceBetween: 20
+				},
+				// when window width is >= 480px
+				1025: {
+					slidesPerView: 5
+				},
+				// when window width is >= 640px
+				1441: {
+					slidesPerView: 6,
+					spaceBetween: 20
+				}
+			},
+			speed: 1250,
+			navigation: {
+				nextEl: ".navigation-partner-next",
+				prevEl: ".navigation-partner-prev"
+			}
+		}
+	);
 }
 // Mapping mobile
 
