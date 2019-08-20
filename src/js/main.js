@@ -11,6 +11,18 @@ $(document).ready(function() {
 
 	//Library init
 	$(".lightgallery").lightGallery();
+	$(".product-filter-side-wrapper .mobile-filter").on("click", function() {
+		$(this)
+			.parents(".product-filter-side-wrapper")
+			.removeClass("active");
+	});
+	$(".product-filter-side .title").on("click", function() {
+		$(this)
+			.parent(".product-filter-side")
+			.find(".product-filter-side-wrapper")
+			.addClass("active");
+	});
+
 	//Declare function Javascript
 	productCategoryDashboard();
 	tabActive();
@@ -179,6 +191,48 @@ function swiperInit() {
 			}
 		}
 	);
+	var productBrandSwiper = new Swiper(".product-brands .swiper-container", {
+		// Optional parameters
+		speed: 1250,
+		breakpointsInverse: true,
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 2
+			},
+			576: {
+				slidesPerView: 3
+			},
+			768: {
+				slidesPerView: 4
+			},
+			// when window width is >= 480px
+			1025: {
+				slidesPerView: 5
+			},
+			// when window width is >= 640px
+			1441: {
+				slidesPerView: 8
+			}
+		}
+	});
+	var galleryThumbs = new Swiper(".swiper-product-thumb .swiper-container", {
+		spaceBetween: 20,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		slidesPerView: "4",
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true
+	});
+	var galleryTop = new Swiper(".swiper-product-top .swiper-container", {
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	});
 }
 // Mapping mobile
 

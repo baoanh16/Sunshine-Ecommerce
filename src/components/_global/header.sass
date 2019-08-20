@@ -111,7 +111,10 @@ header
 	.cart-wrapper
 		padding: 0 20px
 		border-right: 1px solid #545454
-		margin-bottom: 5px
+		margin-bottom: 0
+		em
+			font-size: 20px
+			color: $main
 	.language-wrapper
 		margin: 0 0
 		padding: 0 20px
@@ -230,6 +233,9 @@ header
 					font-weight: 400
 					color: $main
 			.has-mega
+				&:hover
+					.mega-wrapper
+						padding: 30px
 				@media screen and(max-width:1024.2px)
 					&.active
 						.mega-wrapper
@@ -282,7 +288,7 @@ header
 							color: #ffffff
 							right: -5px
 				.mega-wrapper
-					padding: 30px 
+					padding: 0 
 					pointer-events: none
 					position: absolute
 					left: 0
@@ -294,24 +300,16 @@ header
 					margin-left: 0
 					z-index: 9
 					overflow: visible
-					background: rgba(#000000,.7)
+					background: url('../img/bg-2.png'), rgba(#000000,.7)
+					background-repeat: no-repeat
+					background-position: bottom right
+					background-size: contain
 					opacity: 1
 					height: 0
 					opacity: 0
 					pointer-events: none
 					transition: opacity .3s ease,max-height .3s ease .3s
-					// &:after
-					// 	content: ''
-					// 	display: block
-					// 	position: absolute
-					// 	right: 0
-					// 	bottom: 0
-					// 	width: 100%
-					// 	height: 1px
-					// 	background: url('../img/bg-2.png')
-					// 	background-size: con
-					// 	background-position: center
-					// 	background-repeat: no-repeat
+
 					em
 						display: none
 						font-size: 30px

@@ -1,0 +1,297 @@
+.title-grey
+	text-transform: uppercase
+	font-size: 30px
+	color: #333333
+	padding-bottom: 30px
+	position: relative
+	@media screen and(max-width:1441px)
+		padding-bottom: 20px
+	@media screen and(max-width:1025px)
+		font-size: 24px
+	@media screen and(max-width:768px)
+		padding-bottom: 16px
+		&:before
+			left: -10px
+.title-white
+	text-transform: uppercase
+	font-size: 30px
+	color: #ffffff
+	padding-bottom: 30px
+	position: relative
+	&:before
+		content: "/"
+		display: block
+		position: absolute
+		top: 0
+		left: -1.5rem
+	@media screen and(max-width:1441px)
+		padding-bottom: 20px
+	@media screen and(max-width:1025px)
+		font-size: 24px
+	@media screen and(max-width:768px)
+		padding-bottom: 16px
+		&:before
+			left: -10px
+.homepage
+	.product-wrapper
+		padding: 20px
+		display: none
+		display: flex
+		flex: 0 0 100%
+		flex-wrap: wrap
+		margin: 0
+		display: none
+	.product-item-category
+		padding: 0 10px
+		flex:  0 0 20%
+		max-width: 20%
+		@media screen and(max-width:1200px)
+			margin-bottom: 20px
+			flex:  0 0 25%
+			max-width: 25%
+		@media screen and(max-width:1025px)
+			flex:  0 0 33.333%
+			max-width: 33.333%
+			figcaption
+				.top-caption
+					h2
+						*
+							font-size: 17px
+					h3
+						*
+							font-size: 13px
+				.bottom-caption
+					.price
+						h4
+							font-size: 17px
+						h5
+							*
+								font-size: 13px
+		@media screen and(max-width:768px)
+			flex:  0 0 50%
+			max-width: 50%
+		@media screen and(max-width:576px)
+			.figure-image
+				padding:  0 16px
+		@media screen and(max-width:400px)
+			flex:  0 0 100%
+			max-width: 100%
+	.figure-product
+		min-height: 350px
+		max-height: 350px
+		margin-bottom: 20px
+		padding: 20px
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1)
+		transition: .3s all ease-in-out
+		&:hover
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1) , 0px 0px 0px 1px #b72600
+		@media screen and(max-width:1350px)
+			padding: 0 20px
+			min-height: 315px
+			max-height: 315px
+		@media screen and(max-width:1200px)
+			padding: 0 20px
+			min-height: 272px
+			max-height: 272px
+		@media screen and(max-width:1025px)
+			padding: 20px
+			min-height: 350px
+			max-height: 350px
+.product-display
+	background: #f8f8f8
+	padding-bottom: 40px
+	@media screen and(max-width:1025px)
+		padding-bottom: 30px
+	.product-item-category
+	
+		background: #ffffff
+		padding: 0
+		box-shadow: 0 0 8px 0 rgba(0,0,0,.1)
+		margin-bottom: 20px
+		&:hover
+			.figure-image
+				background: #ffffff
+		.button-view-more
+			transition: .3s opacity ease-in-out
+			opacity: 0
+			pointer-events: none
+			display: flex
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			text-align: center
+			border: 1px solid #ffffff
+			margin-bottom: 10px
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 6px 10px
+				font-size: 14px
+				font-weight: 400
+				padding: 8px 30px
+				color: #ffffff
+				white-space: nowrap
+		.button-cart
+			opacity: 0
+			transition: .3s opacity ease-in-out
+			pointer-events: none
+			display: flex
+			justify-content: center
+			align-items: center
+			border-top: 1px solid #ffffff
+			border-bottom: 1px solid #ffffff
+			a
+				cursor: pointer
+				padding: 8px 10px
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 14px
+				color: #ffffff
+				font-weight: 400
+				img
+					width: 20px
+					height: 20px
+		figcaption
+			padding: 0 20px 20px 20px
+			.top-caption
+				padding-bottom: 12px
+				h2
+					cursor: pointer
+					line-height: 22px
+					&:hover
+						*
+							color: #333333
+							text-decoration: underline
+					*
+						margin-bottom: 0
+						display: block
+						font-size: 18px
+						font-weight: 700
+						color: #333333
+						text-transform: uppercase
+				h3
+					cursor: pointer
+					&:hover
+						*
+							color: #333333
+							text-decoration: underline
+					*
+						display: -webkit-box
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						overflow: hidden
+						line-height: 20px
+						font-size: 14px
+						font-weight: 400
+						color: #333333
+			.bottom-caption
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.price
+					h4
+						font-size: 18px
+						font-weight: 700
+						color: #b72600
+					h5
+						*
+							font-size: 14px
+							font-weight: 400
+							color: #999999
+				.cart
+					a
+						cursor: pointer
+						margin-left: 10px
+						&:first-child
+							&:hover
+								em
+									&:before
+										content: '\F2D1'
+										color: #b72600
+						em
+							transition: .3s all ease-in-out
+							font-size: 20px
+							color: #999999
+						img
+							margin-bottom: 8px
+.button-view-more
+	transition: .3s opacity ease-in-out
+	opacity: 0
+	pointer-events: none
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	text-align: center
+	border: 1px solid #ffffff
+	margin-bottom: 10px
+	a
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 6px 10px
+		font-size: 14px
+		font-weight: 400
+		padding: 8px 30px
+		color: #ffffff
+		white-space: nowrap
+.view-more-grey
+	margin-top: 16px
+	transition: .3s opacity ease-in-out
+	display: inline-flex
+	justify-content: flex-start
+	align-items: center
+	cursor: pointer
+	text-align: center
+	border: 1px solid #333
+	margin-bottom: 10px
+	&:hover
+		text-decoration: underline
+	a
+		text-decoration: none
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 6px 10px
+		font-size: 14px
+		font-weight: 400
+		padding: 8px 30px
+		color: #333333
+		white-space: nowrap
+
+.button-cart
+	opacity: 0
+	transition: .3s opacity ease-in-out
+	pointer-events: none
+	display: flex
+	justify-content: center
+	align-items: center
+	border-top: 1px solid #ffffff
+	border-bottom: 1px solid #ffffff
+	a
+		cursor: pointer
+		padding: 8px 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 14px
+		color: #ffffff !important
+		font-weight: 400
+		em
+			font-size: 20px
+			color: #ffffff
+		img
+			width: 20px
+			height: 20px
+.big-title
+	font-size: 36px
+	font-weight: 300
+	color: #333
+	line-height: 1.25
+	margin-bottom: 16px
+	@media (max-width: 1024.98px)
+		font-size: 29px
+	@media (max-width: 767.98px)
+		font-size: 22px

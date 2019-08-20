@@ -1,4 +1,4 @@
-.product-by-category
+.product-by-category 
 	background: #262c32
 	padding: 50px 0 
 	@media screen and(max-width:1441px)
@@ -16,26 +16,21 @@
 				.title-caption
 					border-top: none
 					border-bottom: 1px solid #686c70
-				
-
 			position: relative
 			margin:  10px 0 0 0
 			&.active
 				.product-wrapper
 					display: flex !important
 				.title-caption
+					a
+						color: #ffffff
 					.title
+						color: #ffffff
 						&:before
 							transform: rotate(-180deg) !important
 							line-height: 16px
-				.title-caption
-					.title
-						color: #ffffff
-					a
-						color: #ffffff
-		
+							color: #fff
 			.title-caption
-
 				transition: transform .3s  ease-in-out
 				display: flex
 				padding: 10px 0
@@ -53,7 +48,7 @@
 						font-family: 'Material Design Icons'
 						content: '\f140'
 						font-size: 20px
-						width: 16px
+						width: 22px
 						display: inline-block
 						height: 16px
 						flex:  0 0 17px
@@ -79,187 +74,129 @@
 					padding: 0 0 10px 0
 
 .product-wrapper
-	padding: 20px 0
-	display: none
-	display: flex
-	flex: 0 0 100%
-	flex-wrap: wrap
-	margin: 0
-	display: none
-	.product-item
-		padding: 0 10px
-		flex:  0 0 20%
-		max-width: 20%
-		
-		&:hover
-			.button-view-more,.button-cart
-				opacity: 1
-				pointer-events: auto
-				a
-					height: 30px !important
-			.figure-image
-				background: #0f1214 
-				
-		.button-wrapper
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%,-50%)
-		.button-view-more
-			transition: .3s opacity ease-in-out
-			opacity: 0
-			pointer-events: none
-			display: flex
-			justify-content: center
-			align-items: center
-			cursor: pointer
-			text-align: center
-			border: 1px solid #ffffff
-			margin-bottom: 10px
-
+.product-item-category
+	padding: 0 10px
+	flex:  0 0 100%
+	max-width: 100%
+	&:hover
+		.button-view-more,.button-cart
+			opacity: 1
+			pointer-events: auto
 			a
-
-				display: flex
-				justify-content: center
-				align-items: center
-				padding: 6px 10px
-				font-size: 14px
-				font-weight: 400
-				display: block
-				padding: 8px 30px
-				color: #ffffff
-				white-space: nowrap
-		.button-cart
-			opacity: 0
-			transition: .3s opacity ease-in-out
-			pointer-events: none
-			display: flex
-			justify-content: center
-			align-items: center
-			border-top: 1px solid #ffffff
-			border-bottom: 1px solid #ffffff
-			a
-				cursor: pointer
-				padding: 8px 10px
-				display: flex
-				justify-content: center
-				align-items: center
-				font-size: 14px
-				color: #ffffff
-				font-weight: 400
-				img
-					width: 20px
-					height: 20px
+				height: 30px !important
+				&:hover
+					color: #ffffff
 		.figure-image
+			z-index: 1
 			position: relative
-			padding: 20px
-
-			> a
+			&:before
+				content: ''
 				display: block
-				height: 200px
-				padding: 20px
-				width: auto
-				img
-					width: 100%
-					height: 100%
-					object-fit: contain
-		figcaption
-			.top-caption
-				padding-bottom: 12px
-				h2
-					cursor: pointer
-					line-height: 22px
-					&:hover
-						*
-							text-decoration: underline
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 100%
+				z-index: 0
+				background: rgba(#000000,.8)
+	.button-wrapper
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+
+	.figure-image
+		position: relative
+		padding: 20px 20px 0 20px
+		margin-bottom: 16px
+		> a
+			display: block
+			height: 200px
+			padding: 20px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+	figcaption
+		.top-caption
+			padding-bottom: 12px
+			h2
+				cursor: pointer
+				line-height: 22px
+				&:hover
 					*
-						margin-bottom: 0
-						display: block
-						font-size: 18px
-						font-weight: 700
+						text-decoration: underline
 						color: #ffffff
-						text-transform: uppercase
-				h3
-					cursor: pointer
-					&:hover
-						*
-							text-decoration: underline
+				*
+					margin-bottom: 0
+					display: block
+					font-size: 18px
+					font-weight: 700
+					color: #ffffff
+					text-transform: uppercase
+			h3
+				cursor: pointer
+				&:hover
 					*
-						display: -webkit-box
-						-webkit-line-clamp: 2
-						-webkit-box-orient: vertical
-						overflow: hidden
-						line-height: 20px
+						text-decoration: underline
+						color: #ffffff
+				*
+					display: -webkit-box
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					line-height: 20px
+					font-size: 14px
+					font-weight: 400
+					color: #cccccc
+		.bottom-caption
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.price
+				h4
+					font-size: 18px
+					font-weight: 700
+					color: #cccccc
+				h5
+					*
 						font-size: 14px
 						font-weight: 400
 						color: #cccccc
+			.cart
+				a
+					cursor: pointer
+					margin-left: 10px
+					&:hover
+						em
+							&:before
+								color: #b72600
+					&:first-child
+						&:hover
+							em
+								&:before
+									content: '\F2D1'
+									color: #b72600
+					em
+						transition: .3s all ease-in-out
+						font-size: 20px
+						color: #cccccc
+					img
+						margin-bottom: 8px
+
+		@media screen and(max-width:1025px)
+			.top-caption
+				h2
+					*
+						font-size: 17px
+				h3
+					*
+						font-size: 13px
 			.bottom-caption
-				display: flex
-				justify-content: space-between
-				align-items: center
 				.price
 					h4
-						font-size: 18px
-						font-weight: 700
-						color: #cccccc
+						font-size: 17px
 					h5
 						*
-							font-size: 14px
-							font-weight: 400
-							color: #cccccc
-				.cart
-					a
-						cursor: pointer
-						margin-left: 10px
-						&:first-child
-							&:hover
-								em
-									&:before
-										content: '\F2D1'
-										color: #b72600
-						em
-							transition: .3s all ease-in-out
-							font-size: 20px
-							color: #cccccc
-						img
-							margin-bottom: 8px
-	@media screen and(max-width:1200px)
-		.product-item
-			margin-bottom: 20px
-			padding: 0 10px
-			flex:  0 0 25%
-			max-width: 25%
-	@media screen and(max-width:1025px)
-		.product-item
-			padding: 0 10px
-			flex:  0 0 33.333%
-			max-width: 33.333%
-			figcaption
-				.top-caption
-					h2
-						*
-							font-size: 17px
-					h3
-						*
 							font-size: 13px
-				.bottom-caption
-					.price
-						h4
-							font-size: 17px
-						h5
-							*
-								font-size: 13px
-	@media screen and(max-width:768px)
-		.product-item
-			padding: 0 10px
-			flex:  0 0 50%
-			max-width: 50%
-	@media screen and(max-width:576px)
-		.product-item
-			.figure-image
-				padding:  0 16px
-	@media screen and(max-width:400px)
-		.product-item
-			padding: 0 10px
-			flex:  0 0 100%
-			max-width: 100%

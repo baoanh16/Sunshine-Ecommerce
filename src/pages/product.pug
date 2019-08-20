@@ -1,0 +1,15 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'product-display'
+
+block main
+	include ../components/product/brand/index.pug
+	.container
+		.row
+			.col-lg-2
+				include ../components/product/filter/index.pug
+			.col-lg-10
+				include ../components/product/list/index.pug
+
