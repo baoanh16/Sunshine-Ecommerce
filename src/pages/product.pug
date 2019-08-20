@@ -5,6 +5,7 @@ block var
 	- var bodyClass = 'product-display'
 
 block main
+	include ../components/breadcrumb/product.pug
 	include ../components/product/brand/index.pug
 	.container
 		.row
@@ -12,4 +13,5 @@ block main
 				include ../components/product/filter/index.pug
 			.col-lg-10
 				include ../components/product/list/index.pug
+				include ../components/pagination/index.pug
 

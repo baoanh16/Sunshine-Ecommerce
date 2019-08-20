@@ -1,7 +1,7 @@
 .product-information-detail
-	padding: 50px 0
+	padding: 10px 0 50px 
 	@media screen and(max-width:1025px)
-		padding: 30px 0
+		padding: 0 0 30px 
 	.swiper-wrapper
 		padding: 2px
 	.swiper-product-top
@@ -47,10 +47,13 @@
 				td
 					&:last-child
 						font-weight: 700
+			&:first-child
+				td
+					padding: 0  0 8px 0
 			td
-				padding: 9px 0
+				padding: 8px 0
 				color: #666666
-				font-size: 14px
+				font-size: 16px
 				font-weight: 400
 				a
 					color: #666666
@@ -61,6 +64,7 @@
 					width: 30%
 					max-width: 30%
 					font-weight: 600
+					
 	
 	.download-file
 		border-top: 1px solid #ebebeb
@@ -190,10 +194,12 @@
 			font-weight: 400
 			margin-bottom: 16px
 		img
+			display: block
+		
 			text-align: center
 			max-width: 100%
 			height: auto
-			margin: 16px 0
+			margin: 16px auto
 .others-project
 	.white-title-bg-grey
 		margin-bottom: 30px
