@@ -12,6 +12,21 @@
 		padding-bottom: 16px
 		&:before
 			left: -10px
+.title-grey-center
+	text-align: center
+	text-transform: uppercase
+	font-size: 30px
+	color: #333333
+	padding-bottom: 30px
+	position: relative
+	@media screen and(max-width:1441px)
+		padding-bottom: 20px
+	@media screen and(max-width:1025px)
+		font-size: 24px
+	@media screen and(max-width:768px)
+		padding-bottom: 16px
+		&:before
+			left: -10px
 .title-white
 	text-transform: uppercase
 	font-size: 30px
@@ -239,7 +254,7 @@
 		white-space: nowrap
 .view-more-grey
 	margin-top: 16px
-	transition: .3s opacity ease-in-out
+	transition: .3s opacity ease-in-out, .3s ease-in-out
 	display: inline-flex
 	justify-content: flex-start
 	align-items: center
@@ -249,7 +264,12 @@
 	margin-bottom: 10px
 	&:hover
 		text-decoration: underline
+		border-color: #b72600
+
+		a
+			color: #b72600
 	a
+		transition: .3s all ease-in-out
 		text-decoration: none
 		display: flex
 		justify-content: center

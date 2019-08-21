@@ -34,6 +34,17 @@ $(document).ready(function() {
 	mappingLink();
 	swiperInit();
 	toggleMegaMenuMobile();
+	faqDashboard();
+
+	var temp = location.pathname.split("/").slice(-1)[0];
+	let url = "./" + temp;
+	jQuery(".navigation-wrapper a").each(function() {
+		if ($(this).attr("href") == url)
+			$(this)
+				.parent()
+				.addClass("active");
+	});
+	// activeAfterLoad();
 	if ($(window).width() > 1024) {
 		const $menu = $(".searchbox");
 		$(document).mouseup(e => {
@@ -93,6 +104,31 @@ function productCategoryDashboard() {
 	});
 }
 
+function faqDashboard() {
+	$(".faq-dashboard > li > .title").click(function(e) {
+		e.preventDefault();
+		if (
+			!$(this)
+				.parent()
+				.hasClass("active")
+		) {
+			$(".faq-dashboard li .content").slideUp();
+			$(this)
+				.next()
+				.slideToggle();
+			$(".faq-dashboard li").removeClass("active");
+			$(this)
+				.parent()
+				.addClass("active");
+		} else {
+			$(this)
+				.next()
+				.slideToggle();
+			$(".faq-dashboard li").removeClass("active");
+		}
+	});
+}
+
 function tabActive() {
 	$(".tab-navigation-wrapper li a").on("click", function() {
 		$(this)
@@ -116,6 +152,7 @@ function mobileToggle() {
 		$(".mobile-wrapper").toggleClass("active");
 	});
 }
+
 function toggleMegaMenuMobile() {
 	let parentNav = $(".navigation-wrapper ul li.has-mega em");
 	parentNav.on("click", function() {

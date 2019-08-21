@@ -1,0 +1,148 @@
+.faq-display
+	padding-bottom: 50px
+	@media screen and(max-width:1025px)
+		padding-bottom: 40px
+	@media screen and(max-width:576px)
+		padding-bottom: 30px
+	@media screen and(max-width:500px)
+		margin: 30px 0
+	.faq-dashboard
+		font-weight: bold
+		list-style-type: none
+		padding: 0
+		padding-left: 16px
+		margin: 0
+		li
+			color: #333333
+			position: relative
+			padding: 20px 0 0 0
+			&.active
+				.title
+				&:before
+					content: '-'
+			&:before
+				position: absolute
+				left: -16px
+				font-weight: 300
+				top: 20px
+				content: '+'
+				font-size: 40px
+				color: #666666
+			.title
+				cursor: pointer
+				color: #333333
+				margin-left: -16px
+				line-height: 23px
+				display: block
+				padding: 16px 0 0 30px
+				font-weight: 400
+				border-top: 1px solid #e6e6e6
+				font-weight: 700
+				&:hover
+					color: #999999
+			.content
+				display: none
+				margin: 30px 0 10px 0
+				p
+					padding: 0 10px 0 25px
+					font-weight: 400
+					font-size: 15px
+					line-height: 20px
+					color: #666666
+	@media screen and(max-width:1025px)
+		padding-bottom: 30px
+	@media screen and(max-width:576px)
+		.faq-dashboard
+			li
+				&:before
+					top: 22px
+	.question-wrapper
+		padding: 30px 15px
+		background: url('../img/bg-3.png') repeat
+		box-shadow: 0 0 0 2px #dbdbdb
+		@media screen and(max-width:1025px)
+			margin: 50px 0 30px 0
+		@media screen and(max-width:576px)
+			margin: 50px 0 0 0
+		h2
+			font-size: 14px
+			color: #666666
+			font-weight: 400
+			margin-bottom: 16px
+		.wrap-form
+			.form-group
+				margin-bottom: 16px
+				input,textarea
+					border-radius: 2px
+					color: #495057
+					padding: 4px 10px 4px 10px
+					display: block
+					width: 100%
+					font-size: 14px
+					border: 1px solid #ced4da
+					&::placeholder
+						font-style: italic
+						font-size: 13px
+					&:focus
+						outline: none
+			.frm-btn
+				margin-top: 16px
+				vertical-align: middle
+				transform: perspective(1px) translateZ(0)
+				transition-duration: .3s
+				transition-property: transform
+				margin-bottom: 15px
+				cursor: pointer
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 4px 40px
+				background: none
+				color: #ffffff
+				background: #b72600
+				transition: .3s all ease-in-out
+				vertical-align: middle
+				transform: perspective(1px) translateZ(0)
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+				position: relative
+				transition-property: color
+				transition-duration: 0.5s
+				z-index: 120
+				&:before
+					content: ""
+					position: absolute
+					z-index: -1
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					background: #333333
+					transform: scaleX(0)
+					transform-origin: 0 50%
+					transition-property: transform
+					transition-duration: 0.5s
+					transition-timing-function: ease-out
+				&:hover
+					input[type='submit']
+						color: white
+						z-index: 125
+
+					&:before
+						-webkit-transform: scaleX(1)
+						transform: scaleX(1)
+						-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+						transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+				input[type='submit']
+					padding: 0
+					text-transform: uppercase
+					color: #ffffff
+					border: none
+					font-weight: 700
+					font-size: 16px
+					background: none
+					&:focus
+						outline: none
+				em
+					padding-left: 8px
+					color: #fff
+					font-size: 16px

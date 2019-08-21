@@ -1,0 +1,62 @@
+.news-display
+	padding: 50px 0
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+	.row
+		.col-lg-3
+			margin-bottom: 20px
+	.figure-news
+		&:hover
+			figcaption
+				border-color: #8c0000
+		.figure-image
+			overflow: hidden
+			&:hover
+				a
+					img
+						transform: scale(1.05)
+			a
+				height: 200px
+				width: auto
+				img
+					transition: transform .3s ease-in-out
+					width: 100%
+					height: 100%
+					object-fit: cover
+
+		figcaption
+			min-height: 110px
+			transition: .3s all ease-in-out
+			position: relative
+			border-left: 10px solid #f2f2f2
+			padding-left: 16px
+			margin-top: 16px
+			.title
+				*
+					font-size: 18px
+					color: #333333
+					font-weight: 400
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+					line-height: 27px
+			.view-more
+				&:hover
+					text-decoration: underline
+				*
+					font-size: 18px
+					color: #8c0000
+					margin-right: 10px
+					font-weight: 600
+				a
+					em
+						margin-left: 10px
+						font-size: 18px
+			@media screen and(max-width:768px)
+				.title
+					*
+						font-size: 16px
+				.view-more
+					*
+						font-size: 16px
