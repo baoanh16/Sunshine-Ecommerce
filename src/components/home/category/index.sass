@@ -20,7 +20,8 @@
 			margin:  10px 0 0 0
 			&.active
 				.product-wrapper
-					display: flex !important
+					display: block
+					opacity: 1
 				.title-caption
 					a
 						color: #ffffff
@@ -36,13 +37,16 @@
 				padding: 10px 0
 				justify-content: space-between
 				align-items: center
+				&:hover
+					.title
+						color: #a12505
 				.title
 					cursor: pointer
 					text-transform: uppercase
 					display: block
 					font-size: 18px
 					font-weight: 700
-					transition: transform .3s  ease-in-out
+					transition: transform .3s  ease-in-out, .3s ease-in-out
 					color: #929598
 					&:before
 						font-family: 'Material Design Icons'
@@ -56,11 +60,14 @@
 						transition: transform .3s  ease-in-out
 						color: #929598
 				a
-					transition: transform .3s  ease-in-out
+					transition: transform .3s  ease-in-out,.3s ease-in-out
 					font-size: 16px
 					display: block
 					font-weight: 500
 					color: #929598
+					&:hover
+						a
+							color: #a12505
 	@media screen and(max-width:767.8px)
 		ul
 			li
@@ -74,6 +81,11 @@
 					padding: 0 0 10px 0
 
 .product-wrapper
+	
+.product-item-wrapper
+	display: flex
+	flex-wrap: wrap
+	flex: 0 0 100%
 .product-item-category
 	padding: 0 10px
 	flex:  0 0 100%
@@ -165,6 +177,9 @@
 						font-weight: 400
 						color: #cccccc
 			.cart
+				display: flex
+				justify-content: center
+				align-items: center
 				a
 					cursor: pointer
 					margin-left: 10px

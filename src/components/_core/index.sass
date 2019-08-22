@@ -49,6 +49,8 @@
 			left: -10px
 .homepage
 	.product-wrapper
+		opacity: 0
+		transition: opacity .3s ease-in-out
 		padding: 20px
 		display: none
 		display: flex
@@ -216,6 +218,9 @@
 							font-weight: 400
 							color: #999999
 				.cart
+					display: flex
+					justify-content: center
+					align-items: center
 					a
 						cursor: pointer
 						margin-left: 10px
@@ -315,3 +320,21 @@
 		font-size: 29px
 	@media (max-width: 767.98px)
 		font-size: 22px
+.cart-icon
+	width: 20px
+	height: 20px
+	display: flex
+	justify-content: center
+	align-items: center
+	background: url('../img/cart-grey.png')
+	background-repeat: no-repeat
+	background-size: contain
+	&:hover
+		background: url('../img/cart-red.png')
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		bottom: 0
+		wid

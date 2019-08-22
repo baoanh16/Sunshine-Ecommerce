@@ -22,6 +22,9 @@ $(document).ready(function() {
 			.find(".product-filter-side-wrapper")
 			.addClass("active");
 	});
+	$(document).ready(function() {
+		$(".lightgallery").lightGallery();
+	});
 
 	//Declare function Javascript
 	productCategoryDashboard();
@@ -82,12 +85,14 @@ function productCategoryDashboard() {
 				.parent()
 				.hasClass("active")
 		) {
-			$(".product-by-category-wrapper ul li .product-wrapper").slideUp();
+			$(".product-by-category-wrapper ul li .product-wrapper")
+				.slideUp()
+				.delay(500);
 			$(this)
 				.next()
-				.slideDown("slow", function() {
+				.slideDown("1000", function() {
 					$("html, body").animate({
-						scrollTop: $(this).offset().top - 100
+						scrollTop: $(this).offset().top - 150
 					});
 				});
 
