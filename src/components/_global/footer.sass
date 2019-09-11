@@ -23,6 +23,12 @@ footer
 				height: 46px
 				border: 1px solid #a7a8a9
 				border-radius: 50%
+				transition: .3s all ease-in-out
+				&:hover
+					border-color: #ffffff
+					background: #8c2004
+					em
+						color: #ffffff
 				em
 					font-size: 18px
 					color: #a7a8a9
@@ -35,9 +41,10 @@ footer
 			padding-bottom: 16px
 		.caption
 			font-size: 16px
-			font-weight: 16px
 			font-weight: 700
 			color: $main
+			display: inline-block
+			margin-bottom: 10px
 		nav
 			display: flex
 			flex-direction: column
@@ -53,6 +60,8 @@ footer
 				transition: .3s all ease-in-out
 				&:hover,&:active
 					color: #ffffff
+				em
+					margin-right: 6px
 
 	
 		.project

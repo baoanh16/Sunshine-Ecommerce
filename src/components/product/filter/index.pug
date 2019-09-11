@@ -18,9 +18,20 @@ section.product-filter-side
 			a(href="javascript:void(0)").checkbox United states
 			a(href="javascript:void(0)").checkbox Spain
 		.filter-side-item
-			span.title-filter Radio
-			a(href="javascript:void(0)").radio.active 10m
-			a(href="javascript:void(0)").radio 10m
+			span.title-filter Price
+			#range-price
+
+			.text-amount
+				span Form 
+				span#min-price 0 
+				span To 
+				span#max-price 500 
+			
+			//- input#amount(type="text" readonly="" style="border:0; color:#0c4c8d; font-weight:bold;")
+		.filter-side-item
+			span.title-filter Free Shipping
+			a(href="javascript:void(0)").radio.active Yes
+			a(href="javascript:void(0)").radio No
 		.filter-side-item
 			span.title-filter Color
 			.color-wrapper
@@ -29,6 +40,16 @@ section.product-filter-side
 				a(href="javascript:void(0)").color
 				a(href="javascript:void(0)").color
 				a(href="javascript:void(0)").color
+		.filter-side-item
+			span.title-filter Price
+			a(href="javascript:void(0)").checkbox 100
+			a(href="javascript:void(0)").checkbox 200
+			a(href="javascript:void(0)").checkbox 300 
+		.filter-side-item
+			span.title-filter Size
+			a(href="javascript:void(0)").checkbox Large
+			a(href="javascript:void(0)").checkbox Medium
+			a(href="javascript:void(0)").checkbox Small 
 		.filter-side-item
 			span.title-filter Size
 			a(href="javascript:void(0)").checkbox Large

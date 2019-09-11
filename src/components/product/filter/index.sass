@@ -1,13 +1,39 @@
 .product-filter-side
-
+	margin-top: 40px
+	@media screen and(min-width:1025px)
+		.title
+			opacity: 0
 	@media screen and(max-width:1025px)
 		margin-top: 0
+	#amount
+		font-size: 14px
+		font-weight: 400 !important
+		&:focus
+			outline: none
+	#range-price
+		width: 100%
+		border: 1px solid #d7d7d7
+		background: #e6e6e6
+		height: 5px
+		.ui-slider-range
+			background: #b72600
+			height: 5px !important
+		.ui-slider-handle
+			width: 15px
+			height: 15px
+			top: -5px !important
+			background: #ffffff
+			border: 2px solid #b72600
+			border-radius: 50%
+			&:focus
+				outline: none
 	span
 		font-size: 16px
 		line-height: 22px
 		color: #333333
 		font-weight: 700
-		
+	
+
 	.title
 		text-transform: uppercase
 		em
@@ -85,6 +111,15 @@
 		justify-content: center
 		align-items: flex-start
 		flex-flow: column
+		.text-amount
+			margin: 16px 0
+			span
+				font-weight: 300
+				font-size: 14px
+				color: #333333
+			#min-price,#max-price 
+				font-weight: 600
+				margin: 0 4px
 		a
 			position: relative
 			color: #333333

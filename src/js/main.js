@@ -1,6 +1,25 @@
 $(document).ready(function() {
 	//Declare normal variable javascript
 	//Hide element when smaller than 1025
+	$(".cart .cart-icon").on("click", function() {
+		// $(".cart-item-quantity").removeClass("active");
+		$(".cart .cart-icon")
+			.not($(this))
+			.next()
+			.removeClass("active");
+		$(this)
+			.next()
+			.toggleClass("active");
+		if (
+			$(this)
+				.next()
+				.hasClass("active")
+		) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+	});
 	if ($(window).width() < 1025) {
 		$(".bottom-header").fadeIn(function() {
 			$(".bottom-header").css({
@@ -8,6 +27,40 @@ $(document).ready(function() {
 			});
 		});
 	}
+
+	$(".qty-minus").click(function() {
+		var val = $(".product-details-quantity").val();
+		if (val > 0) {
+			$(".product-details-quantity").val(val - 1);
+		} else {
+			$(".product-details-quantity").val(0);
+		}
+	});
+	$(".qty-plus").on("click", function() {
+		var val = Number($(".product-details-quantity").val());
+		$(".product-details-quantity").val(val + 1);
+	});
+
+	// $("#range-price").slider({
+	// 	range: true
+	// });
+
+	$("#range-price").slider({
+		range: true,
+		min: 0,
+		max: 500,
+		values: [0, 500],
+		slide: function(event, ui) {
+			$("#min-price").text(ui.values[0]);
+			$("#max-price").text(ui.values[1]);
+		}
+	});
+	// $("#amount").val(
+	// 	"Form " +
+	// 		$("#range-price").slider("values", 0) +
+	// 		" to" +
+	// 		$("#range-price").slider("values", 1)
+	// );
 
 	//Library init
 	$(".lightgallery").lightGallery();
@@ -155,6 +208,8 @@ function tabActive() {
 function mobileToggle() {
 	$("header .mobile-toggle em").on("click", function() {
 		$(".mobile-wrapper").toggleClass("active");
+		let mega = $(".navigation-wrapper ul li.has-mega");
+		mega.removeClass("active");
 	});
 }
 

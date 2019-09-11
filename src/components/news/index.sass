@@ -1,7 +1,7 @@
 .news-display
-	padding: 50px 0
+	padding:  0 0 50px 0
 	@media screen and(max-width:1025px)
-		padding: 40px 0
+		padding:  0 0 40px 0
 	.row
 		.col-lg-3
 			margin-bottom: 20px
@@ -49,12 +49,23 @@
 					line-height: 27px
 			.view-more
 				a
+					display: flex
+					justify-content: center
+					align-items: center
+					transition: .3s all ease-in-out
 					color: #8c0000
 					font-size: 18px
 					&:hover
 						text-decoration: underline
+						em
+							text-decoration: none
 					em
-						margin-left: 10px
+						display: inline-flex
+						justify-content: center
+						align-items: center
+						margin-left: 0
+						margin-top: -1px
+						
 
 			@media screen and(max-width:768px)
 				.title

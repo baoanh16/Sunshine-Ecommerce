@@ -39,7 +39,11 @@
 				align-items: center
 				&:hover
 					.title
-						color: #a12505
+						color: #ffffff
+						&:before
+							color: #ffffff
+					a
+						color: #ffffff
 				.title
 					cursor: pointer
 					text-transform: uppercase
@@ -101,53 +105,42 @@
 	padding: 0 10px
 	flex:  0 0 100%
 	max-width: 100%
+	transition: .3s all ease-in-out
 	&:hover
-		.button-view-more,.button-cart
-			opacity: 1
-			pointer-events: auto
-			&:hover
-				transition: .3s all ease-in-out
-				border-color: #8c1f04
-				a
-					transition: .3s all ease-in-out
-					color: #8c1f04 !important
-			a
-				height: 30px !important
-				&:hover
-					color: #ffffff
 		.figure-image
-			z-index: 1
-			position: relative
-			&:before
-				opacity: 1
-	.button-wrapper
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%,-50%)
+			
+			a
+				img
+					margin-top: -4px
+
 
 	.figure-image
 		position: relative
 		padding: 20px 20px 0 20px
 		margin-bottom: 16px
-		&:before
-			content: ''
-			display: block
+		.discount
 			position: absolute
-			left: 0
-			bottom: 0
-			width: 100%
-			height: 100%
-			z-index: 0
-			background: rgba(#000000,.8)
-			opacity: 0
-			transition: opacity .3s ease-in-out
+			top: -5px
+			right: -5px
+			p
+				color: #ffffff
+				font-weight: 600
+				font-size: 14px
+				width: 32px
+				height: 20px
+				display: flex
+				justify-content: center
+				align-items: center
+				background: #b72600
+
 		> a
 			display: block
 			height: 200px
 			padding: 20px
 			width: auto
 			img
+				transition: .3s all ease-in-out
+
 				width: 100%
 				height: 100%
 				object-fit: contain
@@ -184,6 +177,7 @@
 					font-weight: 400
 					color: #cccccc
 		.bottom-caption
+			position: relative
 			display: flex
 			justify-content: space-between
 			align-items: center

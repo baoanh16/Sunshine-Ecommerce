@@ -20,10 +20,9 @@ select[data-nav]
 				font-size: 22px
 		h2
 			color: rgb(102, 102, 102)
-			font-size: 24px
+			font-size: 18px
 			font-weight: 300
-			@media screen and(max-width:1025px)
-				font-size: 20px
+
 		p
 			margin-bottom: 24px
 			font-size: 18px
@@ -72,13 +71,7 @@ select[data-nav]
 			padding-left: 30px
 			position: relative
 			transition: .3s all ease-in-out
-			&:hover
-				color: #b72600
-			&.active
-				font-weight: 700
-				color: black
-				position: relative
-				&:before
+			&:before
 					position: absolute
 					width: 12px
 					height: 12px
@@ -87,6 +80,19 @@ select[data-nav]
 					transform: translateY(-50%)
 					left: 0
 					content: ''
+					opacity: 0
+			&:hover
+				color: #000000
+				&:before
+					opacity: 1
+					transition: opacity .3s ease-in-out
+				
+			&.active
+				font-weight: 700
+				color: black
+				position: relative
+				&:before
+					opacity: 1
 
 .pd-60
 	padding-top: 50px

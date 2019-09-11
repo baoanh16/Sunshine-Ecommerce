@@ -56,7 +56,62 @@
 		color: #ffffff
 		text-transform: uppercase
 		font-weight: 600
+.product-detail
+	.product-tab-wrapper
+		margin-top: 30px
+	.tab-navigation-wrapper
+		ul
+			li
+				a
+					color: #bbb 
+				&:hover
+					a
+						color: #ffffff 
+	.tab-navigation-wrapper,.white-title-bg-grey
+		position: relative
+
+
+		&:before,&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			width: 1000px
+			height: 67px
+			background: #292e35
+			@media screen and(max-width:1025px)
+				display: none
+		&:before
+			left: -1000px
+		&:after
+			right: -1000px
+	.white-title-bg-grey
+		position: relative
+		&:before,&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			width: 1000px
+			height: 59px
+			background: #292e35
+			@media screen and(max-width:1025px)
+				display: none
+		&:before
+			left: -1000px
+		&:after
+			right: -1000px
+
+
 .homepage
+	.tab-navigation-wrapper
+		padding: 0
+		margin: 0
+		background: #ffffff
+		ul
+			li
+				a
+					color: #323232
 	.product-wrapper
 		opacity: 0
 		transition: opacity .3s ease-in-out
@@ -71,6 +126,17 @@
 		padding: 0 10px
 		flex:  0 0 20%
 		max-width: 20%
+		figcaption
+			.top-caption
+				&:hover
+					*
+						text-decoration: none
+	
+			.bottom-caption
+				position: relative
+				.price
+					h4
+						color: #b72600 
 		@media screen and(max-width:1200px)
 			margin-bottom: 20px
 			flex:  0 0 25%
@@ -90,6 +156,7 @@
 					.price
 						h4
 							font-size: 17px
+							color: #b72600 !important
 						h5
 							*
 								font-size: 13px
@@ -155,6 +222,7 @@
 						&:hover
 							color: #333333
 			.bottom-caption
+				position: relative
 				.price
 					h4
 						font-size: 17px
@@ -202,16 +270,22 @@
 			max-height: 350px
 .product-display
 	background: #f8f8f8
-	padding-bottom: 40px
-	@media screen and(max-width:1025px)
-		padding-bottom: 30px
+	.product-filter-side
+		margin-top: 0
+	.product-list
+		margin-top: 0
 	.product-item-category
-	
 		background: #ffffff
 		padding: 0
-		box-shadow: 0 0 8px 0 rgba(0,0,0,.1)
 		margin-bottom: 20px
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.1)
+		&
+		.figure-image
+			.discount
+				top: 5px
+				right: 5px
 		&:hover
+			box-shadow: 0 0 15px 0 rgba(0,0,0,.1), 0 0 0 1px #b72600
 			.figure-image
 				background: #ffffff
 		.button-view-more
@@ -265,8 +339,8 @@
 					line-height: 22px
 					&:hover
 						*
-							color: #333333
-							text-decoration: underline
+							color: #a12505
+							text-decoration: none
 					*
 						margin-bottom: 0
 						display: block
@@ -278,8 +352,8 @@
 					cursor: pointer
 					&:hover
 						*
-							color: #333333
-							text-decoration: underline
+							text-decoration: none
+							color: #a12505
 					*
 						display: -webkit-box
 						-webkit-line-clamp: 2
@@ -291,6 +365,7 @@
 						color: #333333
 			.bottom-caption
 				display: flex
+				position: relative
 				justify-content: space-between
 				align-items: center
 				.price
@@ -406,7 +481,8 @@
 		font-size: 29px
 	@media (max-width: 767.98px)
 		font-size: 22px
-.cart-icon
+.cart-icon 
+	cursor: pointer
 	width: 20px
 	height: 20px
 	display: flex
@@ -417,6 +493,8 @@
 	background-size: contain
 	&:hover
 		background: url('../img/cart-red.png')
+		background-repeat: no-repeat
+		background-size: contain
 	&:after
 		content: ''
 		display: block
@@ -424,3 +502,52 @@
 		left: 0
 		bottom: 0
 		wid
+#amount
+	margin-top: 10px
+	background: #f8f8f8
+//Cart item wrapper
+.cart-item-quantity
+	position: absolute
+	bottom: 5px
+	pointer-events: none
+	z-index: -1
+	opacity: 0
+	left: 0
+	border: solid 1px #c5c5c5
+	&.active
+		z-index: 111
+		opacity: 1
+		pointer-events: auto
+		transition:  opacity .3s ease-in-out
+	.input-group
+		display: flex
+		justify-content: center
+		align-items: center
+	.input-group-btn
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #f5f5f5
+		height: 40px
+		width: 50px
+		position: relative
+		&:hover
+			background: $main
+			color: #fff
+			transition: .25s all ease-in-out
+		.btn-number
+			height: 100%
+			width: 100%
+			line-height: 40px
+			text-align: center
+			display: flex
+			align-items: center
+			justify-content: center
+			em
+				color: #c5c5c5
+	input
+		border: 0
+		text-align: center
+		background: #ffffff
+		width: 50px
+		height: 40px

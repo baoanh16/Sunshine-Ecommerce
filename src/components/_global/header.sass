@@ -15,7 +15,6 @@ header
 			position: relative
 			height: 100%
 	.header-wrapper-left
-		padding-top: 13px
 		.navbrand
 			a
 				img
@@ -90,6 +89,14 @@ header
 		display: flex
 		justify-content: center
 		align-items: center
+		&:hover
+			*
+				transition: .3s all ease-in-out
+				color: #ffffff
+			.account-wrapper-toggle
+				li
+					color: #ffffff
+					transition: .3s all ease-in-out
 		em
 			margin-right: 5px
 			font-size: 20px
@@ -117,8 +124,8 @@ header
 		display: flex
 		justify-content: center
 		align-items: center
-		padding: 0 20px
-		border-right: 1px solid #545454
+		padding: 0 0 0 20px
+		
 		margin-bottom: 0
 		height: 30px
 		em
@@ -126,10 +133,11 @@ header
 			color: $main
 	.language-wrapper
 		margin: 0 0
-		padding: 0 20px
+		padding: 0 25px
 		border-left: 1px solid #545454
 		@media screen and(max-width:1025px)
 			margin-right: 20px
+			padding: 0 20px
 		.language-list
 			list-style-type: none
 			padding: 0
@@ -143,7 +151,7 @@ header
 						color: #ff0000
 				&:hover
 					a
-						color: $main
+						color: #ffffff
 				a
 					transition: .3s all ease-in-out
 					text-decoration: none
@@ -184,10 +192,10 @@ header
 								display: flex
 								justify-content: center
 								align-items: center
-								color: #ffffff
+								color: $main
 							&:hover
 								a
-									color: #333333
+									color: #ffffff
 				span,a
 					position: relative
 				span
@@ -202,7 +210,7 @@ header
 					margin-left: -10%
 					z-index: 118
 					overflow: hidden
-					background: $main
+					background: rgba(#000000,.9)
 					opacity: 0
 					transition: opacity .3s ease,max-height .3s ease .3s
 					li
@@ -274,7 +282,7 @@ header
 							z-index: 14
 							&:after
 								z-index: 11
-								transform: rotate(-180deg)
+								// transform: rotate(-180deg)
 								color: #ffffff
 				
 				span,a
@@ -309,14 +317,18 @@ header
 					margin-left: 0
 					z-index: 9
 					overflow: visible
-					background: url('../img/bg-2.png'), rgba(#000000,.7)
+					background: url('../img/bg-2.png'), rgba(#000000,.9)
 					background-repeat: no-repeat
 					background-position: bottom right
 					background-size: 20% 30%
 					height: 0
 					opacity: 0
 					pointer-events: none
+					margin: 0 -10px
 					transition: opacity .3s ease,max-height .3s ease .3s
+					@media screen and(max-width:1441px)
+						padding: 10px 30px !important
+						background-position: 95% 90%
 					@media screen and(max-width:1025px)
 						background: rgba(#000000,.7)
 
@@ -327,6 +339,8 @@ header
 						display: block
 						padding: 0
 						margin: 0 0 30px 0
+						@media screen and(max-width:1441px)
+							margin: 0 0 15px 0
 						@media screen and(max-width:1200px)
 							h2
 								a
@@ -346,8 +360,10 @@ header
 										color: #ffffff
 								a
 									display: block
-									padding: 4px 0
+									padding: 2px 0
 									color: $main
+									font-size: 14px
+									text-transform: none
 						h2
 							font-size: 14px
 							color: $main
@@ -365,7 +381,7 @@ header
 								height: 2px
 								background: $main 
 						a
-							color: #ffffff
+							color: #b2b2b2
 							transition: all .3s ease 0s
 							&:after
 								display: none
@@ -396,12 +412,55 @@ header
 			justify-content: center
 			align-items: center
 			cursor: pointer
-			padding: 4px 15px
+			padding: 6px 15px
 			font-size: 14px
 			color: #ffffff
 			font-weight: 400
-			border-top: 1px solid #ffffff
-			border-bottom: 1px solid #ffffff
+			position: relative
+			&:hover
+				span
+					// &:nth-child(1),&:nth-child(3)
+					// 	transition: transform .5s
+					// 	transform: scaleX(0)
+					// &:nth-child(1)
+					// 	transform-origin: left
+					// &:nth-child(3)
+					// 	transform-origin: right
+					&:nth-child(2),&:nth-child(4)
+						transform: scale(1)
+						transition: transform .5s
+					&:nth-child(2)
+						transform-origin: bottom
+					&:nth-child(4)
+						transform-origin: top
+						
+			span
+				position: absolute
+				transition: transform .5s
+				&:nth-child(1),&:nth-child(3)
+					width: 100%
+					height: 1px
+					background: #ffffff
+					left: 0
+				&:nth-child(1)
+					top: 0
+					transform-origin: right
+				&:nth-child(3)
+					bottom: 0
+					transform-origin: left
+				&:nth-child(2),&:nth-child(4)
+					width: 1px
+					height: 100%
+					background: #ffffff
+					transform: scale(0)
+					top: 0
+				&:nth-child(2)
+					left: 0
+					transform-origin: bottom
+				&:nth-child(4)
+					right: 0
+					transform-origin: top
+
 	.mobile-toggle
 		display: none
 		em
